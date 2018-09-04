@@ -54,13 +54,15 @@ var myArrayCopy = myArray.slice(0,4);
 //DON'T TOUCH THE CODE BELOW
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
-function evensOnly() {
-  return myNumbers.filter(function(val){
-    if (val % 2 === 0){
-      return true;
-    }
-  })
-}
+// function evensOnly() {
+//   return myNumbers.filter(function(val){
+//     if (val % 2 === 0){
+//       return true;
+//     }
+//   })
+// }
+
+var evensOnly = () => myNumbers.filter (val => val % 2 === 0)
 
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
 // CODE HERE
@@ -73,20 +75,24 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
-var trueFriends = peopleIknow.filter(function(person){
-  if (person.friend === true){
-    return true;
-  }
-})
+// var trueFriends = peopleIknow.filter(function(person){
+//   if (person.friend === true){
+//     return true;
+//   }
+// })
+
+var trueFriends = peopleIknow.filter(person => (person.friend === true))
 
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
 
-function indexFinder(array){
-  return array.map(function(value){
-    return array.indexOf(value);
-  })
-}
+// function indexFinder(array){
+//   return array.map(function(value){
+//     return array.indexOf(value);
+//   })
+// }
+
+var indexFinder = array => array.map(value => array.indexOf(value))
 
 var indexes = indexFinder(randomNumbers);
